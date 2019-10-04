@@ -1,0 +1,210 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background: url(./img/boots-bush-casual-2985925.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-transform: uppercase;
+    height: 100vh;
+    box-sizing: border-box;
+    transition: background 0.7s ease-in-out;
+
+}
+
+#overlay {
+    position: fixed;
+    display: block;
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); 
+    z-index: 1;
+    margin: 0px;
+    padding: 0px;
+}
+ul {
+    list-style: none;
+    padding:0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav h1 {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+nav h1:first-letter {
+    text-transform: uppercase;
+}
+
+/* //////////////////////// */
+/* Nav Bar */
+/* //////////////////////// */
+nav {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    border-bottom: 1px solid black;
+}
+
+.NavBarList {
+    position: relative;
+}
+.content {
+    background-color: black;
+    left: 0;
+    display: none;
+}
+.content a{
+    display: block;
+    min-width: 150px;
+    padding: 5px;
+    border-bottom: solid rgb(56, 56, 56) 1px;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.content a:hover{
+    color: rgb(204, 204, 209);
+    transform: translate(8px,0px);
+    border: transparent;
+    padding-bottom: 3px;
+}
+
+
+.nav-container-flex {
+    display: flex;
+    justify-content: center;
+}
+.nav-container-flex li{
+    padding: 0px 30px 0px 0px;
+}
+
+.mainOption::after {
+    content: '';
+    display: block;
+    width: 0px;
+    margin: auto;
+    height: 1px;
+    background-color: white;
+    transition: width .2s;
+}
+
+.mainOption:hover::after {
+    width: 100%;
+}
+
+
+#home:hover #homeContent{
+    display: block;
+	position: absolute;
+}
+#portfolio:hover #portfolioContent{
+    display: block;
+	position: absolute;
+}
+
+/* //////////////////////// */
+/* Slidder */
+/* //////////////////////// */
+.container-slider{
+    margin:0;
+    padding: 0;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.section-slidder{
+    width: 100%;
+    position: absolute;
+    bottom:0;
+    border-top: 1px solid black;
+}
+
+.container-slider p, .container-slider a{
+    padding-left:15px;
+    font-size: 0.8rem;
+    font-stretch: condensed;
+}
+
+.mid-slide{
+    margin:auto;
+    /* transition: all 0.3s ease-in-out; */
+}
+.slidder{
+    display: flex;
+    margin-bottom: 0px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.playDiv{
+    display:none;
+}
+.slide{
+    padding: 12px 50px;
+    cursor: pointer;
+    /* background: rgba(0, 0, 0, 0.8) */
+}
+.slide:hover{
+    background: rgba(19, 18, 18, 0.7);
+}
+.divText{
+    margin-left: 20px;
+    /* background: rgba(235, 231, 231, 0.836); */
+    color:black;
+}
+.divText a{
+    text-decoration: none;
+    color:black;
+    padding-left:0;
+}
+
+.icon{
+    margin-top: 10px;
+}
+.mid-slide::after{
+    margin-top:2px;
+    display: block;
+    content: "";
+    margin: auto;
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    transition: width 0.2s ease-in-out;
+}
+.mid-slide:hover::after{
+    width: 80%;
+}
+
+/* //////////////////////// */
+/* Dark Light Button */
+/* //////////////////////// */
+
+.main-container{
+    position: relative;
+    width:100%;
+}
+.darklightButton{
+    z-index: 3;
+    position: absolute;
+    top:50%;
+    /* left:50%; */
+    height: 40px;
+    margin: 0;
+    transform: rotate(-90deg) translate(-100%,0%);
+    
+}
