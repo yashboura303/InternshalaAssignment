@@ -1,9 +1,11 @@
 body {
+    position: absolute;
     margin: 0px;
     padding: 0px;
     background: url(./img/boots-bush-casual-2985925.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    /* background-position: left; */
     color: white;
     text-transform: uppercase;
     height: 100vh;
@@ -67,14 +69,15 @@ nav {
     background-color: black;
     left: 0;
     display: none;
+    text-align: left;
+    border-bottom: solid 4px gray;
 }
 .content a{
     display: block;
-    min-width: 150px;
+    min-width: 210px;
     padding: 5px;
-    border-bottom: solid rgb(56, 56, 56) 1px;
+    border-bottom: solid rgb(116, 115, 115) 1px;
     transition: all 0.2s ease-in-out;
-
 }
 
 .content a:hover{
@@ -84,6 +87,13 @@ nav {
     padding-bottom: 3px;
 }
 
+.sidemenu{
+    display:none;
+}
+#horizontalOption:hover .sidemenu{
+    display: block;
+    position: absolute;
+}
 
 .nav-container-flex {
     display: flex;
@@ -106,7 +116,10 @@ nav {
 .mainOption:hover::after {
     width: 100%;
 }
-
+.content-icon{
+    font-size:8px;
+    padding:5px;
+}
 
 #home:hover #homeContent{
     display: block;
@@ -116,7 +129,22 @@ nav {
     display: block;
 	position: absolute;
 }
-
+#gallery:hover #galleryContent{
+    display: block;
+	position: absolute;
+}
+#about:hover #aboutContent{
+    display: block;
+	position: absolute;
+}
+#blog:hover #blogContent{
+    display: block;
+	position: absolute;
+}
+#contact:hover #contactContent{
+    display: block;
+	position: absolute;
+}
 /* //////////////////////// */
 /* Slidder */
 /* //////////////////////// */
@@ -198,13 +226,32 @@ nav {
     position: relative;
     width:100%;
 }
-.darklightButton{
+.button{
+    cursor: pointer;
     z-index: 3;
-    position: absolute;
+    position: fixed;
     top:50%;
-    /* left:50%; */
-    height: 40px;
+    left:-1.8%;
+    height: 50px;
     margin: 0;
-    transform: rotate(-90deg) translate(-100%,0%);
-    
+    transform: rotate(-90deg);
+}
+.dark{
+    text-transform: lowercase;
+    background-color: rgb(15, 15, 15);
+    color: white;
+    padding:10px 25px;
+}
+.light{
+    text-transform: lowercase;
+    background-color: white;
+    color: rgb(20, 20, 20);
+    padding:10px 25px;
+}
+.button{
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+}
+.button::first-letter{
+    text-transform: capitalize;  
 }

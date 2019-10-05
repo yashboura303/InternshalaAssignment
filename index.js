@@ -88,6 +88,7 @@ button.addEventListener("click",function(){
   if (lightColor === true){
     
     button.innerHTML = "Light Mode"
+    button.className = " darllightButton light"
     borderNav.style.borderBottom = "solid 1px black"
     sliderNav.style.borderTop = "1px solid black"
     for (var i = 0; i<icon.length; i++) {
@@ -95,6 +96,7 @@ button.addEventListener("click",function(){
     }
     for (var i = 0; i<content.length; i++) {
       content[i].style.backgroundColor = "black"
+      content[i].style.borderBottom = "solid 4px gray"
     }
     for (var i = 0; i<content_a.length; i++) {
       content_a[i].style.color = "white"
@@ -104,12 +106,15 @@ button.addEventListener("click",function(){
   }
   else{
     button.innerHTML = "Dark Mode"
+    button.className = " darllightButton dark"
+
     slidder.style.backgroundColor = "rgba(255,255,255,0.8)";
     for (var i = 0; i<icon.length; i++) {
       icon[i].style.color = "black"
     }
     for (var i = 0; i<content.length; i++) {
       content[i].style.backgroundColor = "white"
+      content[i].style.borderBottom = "solid 4px black"
     }   
     for (var i = 0; i<content_a.length; i++) {
       content_a[i].style.color = "black"
@@ -121,3 +126,11 @@ button.addEventListener("click",function(){
   
 
 })
+
+
+
+
+
+
+
+
